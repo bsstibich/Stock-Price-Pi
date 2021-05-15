@@ -29,8 +29,11 @@ class Stock():
     
 	def output(self): #print current prices, will be adapted to LCD soon
 		print(self.ticker + ": " + str(self.current_price)) 
-		self.display.lcd_display_string(self.ticker + : , 1)
-		self.display.lcd_display_string(str(round(self.current_price,4)), 2)
+		output_price = str(round(self.current_price,4))
+		while len(output_price) < 16:
+			output_price = " " + output_price
+		self.display.lcd_display_string(self.ticker + ':' , 1)
+		self.display.lcd_display_string(output_price, 2)
 	def lcd_clear(self):
 		self.display.lcd_clear()
 
