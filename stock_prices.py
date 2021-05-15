@@ -27,6 +27,7 @@ try:
         clear()
 
         #print current price
+        gme.lcd_clear()
         gme.output()
         if(gme.current_price > gme.open_price):
             print("up")
@@ -34,10 +35,11 @@ try:
             print("down")
         else:
             print("neutral")
-        sleep(20)
-        gme.lcd_clear()
+        sleep(10)
+        
 
         #print current price
+        btc.lcd_clear()
         btc.output()
         if(btc.current_price > btc.open_price):
             print("up")
@@ -45,11 +47,11 @@ try:
             print("down")
         else:
             print("neutral")
-        sleep(20)
-        btc.lcd_clear()
+        sleep(10)
         
         
         #print current price
+        doge.lcd_clear()
         doge.output()
         if(doge.current_price > doge.open_price):
             print("up")
@@ -57,8 +59,8 @@ try:
             print("down")
         else:
             print("neutral")
-        sleep(20)
-        doge.lcd_clear()    
+        sleep(10)
+            
 except KeyboardInterrupt:
     btc.lcd_clear()
     btc.display.lcd_display_string("Stock Prices Pi",1)
