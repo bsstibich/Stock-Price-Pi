@@ -1,4 +1,4 @@
-from ticker_class import stock
+from ticker_class import Stock
 from os import system, name
 from time import sleep
 
@@ -12,9 +12,9 @@ def clear(): #CLI clear function
 gmeT = 'GME'
 dogeT = 'DOGE-USD'
 btcT = 'BTC-USD'
-gme = stock(gmeT)
-btc = stock(btcT)
-doge = stock(dogeT)
+gme = Stock(gmeT)
+btc = Stock(btcT)
+doge = Stock(dogeT)
 
 #running loop
 while True:

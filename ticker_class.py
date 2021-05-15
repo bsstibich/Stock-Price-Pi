@@ -1,12 +1,14 @@
 import yfinance as yf
 from yfinance import ticker
+import drivers
 
-class stock():
+class Stock():
     def __init__(self, ticker = ""):
     
         self.ticker = ticker
         self.open_price = self.get_open_price()
         self.current_price = self.get_current_price()
+        self.display = drivers.Lcd()
 
     def get_current_price(self):
         ticker = yf.Ticker(self.ticker) #yfinance ticker definition
@@ -27,3 +29,5 @@ class stock():
     
     def output(self): #print current prices, will be adapted to LCD soon
         print(self.ticker + ": " + str(self.current_price))
+        self.display.lcd_display_string("Hello World")
+
