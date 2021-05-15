@@ -7,7 +7,7 @@ def clear(): #CLI clear function
         _ = system('cls')  
     else: # for mac and linux
         _ = system('clear') 
-
+sleep(45)
 #init stocks
 gmeT = 'GME'
 dogeT = 'DOGE-USD'
