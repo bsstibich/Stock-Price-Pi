@@ -33,6 +33,8 @@ while True:
         print("down")
     else:
         print("neutral")
+    sleep(20)
+    gme.lcd_clear()
 
     #print current price
     btc.output()
@@ -42,7 +44,10 @@ while True:
         print("down")
     else:
         print("neutral")
-
+    sleep(20)
+    btc.lcd_clear()
+    
+    
     #print current price
     doge.output()
     if(doge.current_price > doge.open_price):
@@ -51,7 +56,7 @@ while True:
         print("down")
     else:
         print("neutral")
-    
-    sleep(40)
+    sleep(20)
+    doge.lcd_clear()    
 
 
