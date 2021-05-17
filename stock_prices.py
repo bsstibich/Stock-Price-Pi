@@ -59,7 +59,7 @@ while True:
             print("down")
         else:
             print("neutral")
-        sleep(3)
+        sleep(5)
     except KeyboardInterrupt:
         break
     finally:
