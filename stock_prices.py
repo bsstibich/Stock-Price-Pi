@@ -22,9 +22,11 @@ while True:
     try:
         
         clear()
-
-        #print current price
         gme.get_prices()
+        btc.get_prices()
+        doge.get_prices()
+        #print current price
+        
         gme.lcd_clear()
         gme.output()
         if(gme.current_price > gme.open_price):
@@ -33,11 +35,11 @@ while True:
             print("down")
         else:
             print("neutral")
-        sleep(3)
+        sleep(5)
         
 
         #print current price
-        btc.get_prices()
+        
         btc.lcd_clear()
         btc.output()
         if(btc.current_price > btc.open_price):
@@ -46,11 +48,11 @@ while True:
             print("down")
         else:
             print("neutral")
-        sleep(3)
+        sleep(5)
         
         
         #print current price
-        doge.get_prices()
+        
         doge.lcd_clear()
         doge.output()
         if(doge.current_price > doge.open_price):
