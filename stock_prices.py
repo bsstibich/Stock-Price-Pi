@@ -60,11 +60,12 @@ while True:
         else:
             print("neutral")
         sleep(3)
+    except KeyboardInterrupt:
+        break
     except:
         btc.lcd_clear()
         btc.display.lcd_display_string("Stock Prices Pi",1)
         btc.display.lcd_display_string("Brandon Stibich",2)
-    except KeyboardInterrupt:
-        break
+    
 
 
