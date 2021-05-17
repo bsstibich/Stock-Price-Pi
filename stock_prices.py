@@ -7,7 +7,7 @@ def clear(): #CLI clear function
         _ = system('cls')  
     else: # for mac and linux
         _ = system('clear') 
-sleep(45)
+sleep(30)
 #init stocks
 gmeT = 'GME'
 dogeT = 'DOGE-USD'
@@ -20,15 +20,12 @@ doge = Stock(dogeT)
 
 while True:
     try:
-        #get opening and current prices
-        gme.get_prices()
-        btc.get_prices()
-        doge.get_prices()
-
+        
         clear()
 
         #print current price
         gme.lcd_clear()
+        gme.get_prices()
         gme.output()
         if(gme.current_price > gme.open_price):
             print("up")
@@ -36,11 +33,12 @@ while True:
             print("down")
         else:
             print("neutral")
-        sleep(5)
+        sleep(3)
         
 
         #print current price
         btc.lcd_clear()
+        btc.get_prices()
         btc.output()
         if(btc.current_price > btc.open_price):
             print("up")
@@ -48,11 +46,12 @@ while True:
             print("down")
         else:
             print("neutral")
-        sleep(5)
+        sleep(3)
         
         
         #print current price
         doge.lcd_clear()
+        doge.get_prices()
         doge.output()
         if(doge.current_price > doge.open_price):
             print("up")
@@ -60,7 +59,7 @@ while True:
             print("down")
         else:
             print("neutral")
-        sleep(5)
+        sleep(3)
     except:
         btc.lcd_clear()
         btc.display.lcd_display_string("Stock Prices Pi",1)
