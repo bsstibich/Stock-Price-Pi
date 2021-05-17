@@ -1,4 +1,5 @@
 from ticker_class import Stock
+import led
 from os import system, name
 from time import sleep
 
@@ -31,10 +32,13 @@ while True:
         gme.output()
         if(gme.current_price > gme.open_price):
             print("up")
+            led.green()
         elif(gme.current_price < gme.open_price):
             print("down")
+            led.red()
         else:
             print("neutral")
+            led.blue()
         sleep(5)
         
 
@@ -44,10 +48,13 @@ while True:
         btc.output()
         if(btc.current_price > btc.open_price):
             print("up")
+            led.green()
         elif(btc.current_price < btc.open_price):
             print("down")
+            led.red()
         else:
             print("neutral")
+            led.blue
         sleep(5)
         
         
@@ -57,10 +64,13 @@ while True:
         doge.output()
         if(doge.current_price > doge.open_price):
             print("up")
+            led.green()
         elif(doge.current_price < doge.open_price):
             print("down")
+            led.red()
         else:
             print("neutral")
+            led.blue()
         sleep(5)
     except KeyboardInterrupt:
         break
