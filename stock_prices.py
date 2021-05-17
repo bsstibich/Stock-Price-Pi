@@ -76,7 +76,6 @@ while True:
     except KeyboardInterrupt:
         break
     finally:
-        led.maroon()
         btc.lcd_clear()
         btc.display.lcd_display_string("Stock Prices Pi",1)
         btc.display.lcd_display_string("Brandon Stibich",2)

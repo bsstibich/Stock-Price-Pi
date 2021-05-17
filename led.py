@@ -27,8 +27,6 @@ def red():
     setColor(100, 0, 0)
 def blue():
     setColor(0, 0, 100)
-def maroon():
-    setColor(50, 0, 0)
 def destroy():
     pwmR.stop()
     pwmG.stop()
