@@ -16,6 +16,7 @@ btcT = 'BTC-USD'
 gme = Stock(gmeT)
 btc = Stock(btcT)
 doge = Stock(dogeT)
+led.setup()
 
 #running loop
 
@@ -78,6 +79,6 @@ while True:
         btc.lcd_clear()
         btc.display.lcd_display_string("Stock Prices Pi",1)
         btc.display.lcd_display_string("Brandon Stibich",2)
-    
+led.destroy()    
 
 

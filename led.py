@@ -27,3 +27,9 @@ def red():
     setColor(100, 0, 0)
 def blue():
     setColor(0, 0, 100)
+def destroy():
+    pwmR.stop()
+    pwmG.stop()
+    pwmB.stop()
+    GPIO.cleanup()
+ 
