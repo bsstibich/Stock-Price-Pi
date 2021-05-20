@@ -23,54 +23,66 @@ led.setup()
 while True:
     try:
         
-        clear()
+        led.blue()
         gme.get_prices()
         btc.get_prices()
         doge.get_prices()
-        #print current price
-        
+
+
+        clear()
         gme.lcd_clear()
         gme.output()
-        if(gme.current_price > gme.open_price):
-            print("up")
-            led.green()
-        elif(gme.current_price < gme.open_price):
-            print("down")
-            led.red()
-        else:
-            print("neutral")
+        try:
+            if(gme.current_price > gme.open_price):
+                print("up")
+                led.green()
+            elif(gme.current_price < gme.open_price):
+                print("down")
+                led.red()
+            else:
+                print("neutral")
+                led.blue()
+        except:
+            gme.current_price = "PRICE ERROR"
+            gme.open_price = "PRICE ERROR"
+            led.blue()
+        sleep(5)
+
+
+        btc.lcd_clear()
+        btc.output()
+        try:
+            if(btc.current_price > btc.open_price):
+                print("up")
+                led.green()
+            elif(btc.current_price < btc.open_price):
+                print("down")
+                led.red()
+            else:
+                print("neutral")
+                led.blue
+        except:
+            btc.current_price = "PRICE ERROR"
+            btc.open_price = "PRICE ERROR"
             led.blue()
         sleep(5)
         
-
-        #print current price
-        
-        btc.lcd_clear()
-        btc.output()
-        if(btc.current_price > btc.open_price):
-            print("up")
-            led.green()
-        elif(btc.current_price < btc.open_price):
-            print("down")
-            led.red()
-        else:
-            print("neutral")
-            led.blue
-        sleep(5)
-        
-        
-        #print current price
         
         doge.lcd_clear()
-        doge.output()
-        if(doge.current_price > doge.open_price):
-            print("up")
-            led.green()
-        elif(doge.current_price < doge.open_price):
-            print("down")
-            led.red()
-        else:
-            print("neutral")
+        doge.output()'
+        try:
+            if(doge.current_price > doge.open_price):
+                print("up")
+                led.green()
+            elif(doge.current_price < doge.open_price):
+                print("down")
+                led.red()
+            else:
+                print("neutral")
+                led.blue()
+        except:
+            doge.current_price = "PRICE ERROR"
+            doge.open_price = "PRICE ERROR"
             led.blue()
         sleep(5)
     except KeyboardInterrupt:
@@ -79,6 +91,7 @@ while True:
         btc.lcd_clear()
         btc.display.lcd_display_string("Stock Prices Pi",1)
         btc.display.lcd_display_string("Brandon Stibich",2)
+        led.blue()
 led.destroy()    
 
 
