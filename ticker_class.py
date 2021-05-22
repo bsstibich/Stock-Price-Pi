@@ -34,6 +34,7 @@ class Stock():
 			output_price = " " + output_price
 		self.display.lcd_display_string(self.ticker + ':' , 1)
 		self.display.lcd_display_string(output_price, 2)
+		
 	def lcd_clear(self):
 		self.display.lcd_clear()
 
