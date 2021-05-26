@@ -28,7 +28,7 @@ def display_stock(stock):
             stock.open_price = "PRICE ERROR"
             print("PRICE ERROR")
             led.blue()
-        sleep(4)
+        sleep(2.5)
 
 sleep(30)
 #init stocks
@@ -45,11 +45,6 @@ led.setup()
 while True:
     try:
         led.blue()
-        gme.get_prices()
-        negg.get_prices()
-        btc.get_prices()
-        doge.get_prices()
-        eth.get_prices()
 
         clear()
         display_stock(gme)
@@ -62,6 +57,7 @@ while True:
         print("Shutting Down stock_prices.py")
         break
     finally:
+        sleep(2)
         btc.lcd_clear()
         btc.display.lcd_display_string("Stock Prices Pi",1)
         btc.display.lcd_display_string("Brandon Stibich",2)
