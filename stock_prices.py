@@ -34,9 +34,11 @@ sleep(30)
 gmeT = 'GME'
 dogeT = 'DOGE-USD'
 btcT = 'BTC-USD'
+ethT = 'ETH-USD'
 gme = Stock(gmeT)
 btc = Stock(btcT)
 doge = Stock(dogeT)
+eth = Stock(ethT)
 #init led
 led.setup()
 
@@ -47,11 +49,13 @@ while True:
         gme.get_prices()
         btc.get_prices()
         doge.get_prices()
+	eth.get_prices()
 
         clear()
         display_stock(gme)
         display_stock(btc)
         display_stock(doge)
+	display_stock(eth)
 
     except KeyboardInterrupt:
         print("Shutting Down stock_prices.py")
