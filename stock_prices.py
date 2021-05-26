@@ -10,6 +10,7 @@ def clear(): #CLI clear function
         _ = system('clear') 
 
 def display_stock(stock):
+        stock.get_prices()
         stock.lcd_clear()
         stock.output()
         try:
@@ -27,7 +28,7 @@ def display_stock(stock):
             stock.open_price = "PRICE ERROR"
             print("PRICE ERROR")
             led.blue()
-        sleep(5)
+        sleep(4)
 
 sleep(30)
 #init stocks
@@ -46,10 +47,13 @@ led.setup()
 while True:
     try:
         led.blue()
+<<<<<<< HEAD
         gme.get_prices()
         btc.get_prices()
         doge.get_prices()
 	eth.get_prices()
+=======
+>>>>>>> 4d55870bc83a65bc0698433eba84711f6a0d979b
 
         clear()
         display_stock(gme)
