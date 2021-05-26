@@ -45,11 +45,6 @@ led.setup()
 while True:
     try:
         led.blue()
-        gme.get_prices()
-        negg.get_prices()
-        btc.get_prices()
-        doge.get_prices()
-        eth.get_prices()
 
         clear()
         display_stock(gme)
