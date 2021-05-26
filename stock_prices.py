@@ -34,6 +34,7 @@ sleep(30)
 #init stocks
 
 gme = Stock('GME')
+negg = Stock('NEGG')
 btc = Stock('BTC-USD')
 doge = Stock('DOGE-USD')
 eth = Stock('ETH-USD')
@@ -45,12 +46,14 @@ while True:
     try:
         led.blue()
         gme.get_prices()
+        negg.get_prices()
         btc.get_prices()
         doge.get_prices()
         eth.get_prices()
 
         clear()
         display_stock(gme)
+        display_stock(negg)
         display_stock(btc)
         display_stock(doge)
         display_stock(eth)
