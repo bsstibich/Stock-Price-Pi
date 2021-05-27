@@ -17,7 +17,7 @@ class Stock():
 			self.current_price = todays_data['Close'][0] #get most recent closing price
 			return self.current_price
 		except:
-			self.current_price = "Price Error"
+			self.current_price = 0
 			return self.current_price
         
     
@@ -28,7 +28,7 @@ class Stock():
 			self.open_price = todays_data['Open'][0] #get today's opening price
 			return self.open_price
 		except:
-			self.open_price = "Price Error"
+			self.open_price = 0
 			return self.open_price
 
 	def get_prices(self): #update both current and open prices
