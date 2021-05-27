@@ -36,7 +36,7 @@ class Stock():
 		self.get_current_price()
     
 	def output(self): #print current prices, will be adapted to LCD soon
-		print(self.ticker + ": " + str(self.current_price)) 
+		 
 
 
 		try:
