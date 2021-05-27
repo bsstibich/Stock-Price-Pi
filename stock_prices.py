@@ -15,13 +15,10 @@ def display_stock(stock):
         stock.output()
         try:
             if(stock.current_price > stock.open_price):
-                print("up")
                 led.green()
             elif(stock.current_price < stock.open_price):
-                print("down")
                 led.red()
             else:
-                print("neutral")
                 led.blue()
         except:
             stock.current_price = "PRICE ERROR"
@@ -30,7 +27,7 @@ def display_stock(stock):
             led.blue()
         sleep(2.5)
 
-sleep(30)
+#sleep(30)
 #init stocks
 
 gme = Stock('GME')
@@ -40,7 +37,7 @@ doge = Stock('DOGE-USD')
 eth = Stock('ETH-USD')
 #init led
 led.setup()
-
+x = 0
 #running loop
 while True:
     try:
@@ -62,7 +59,9 @@ while True:
         btc.display.lcd_display_string("Stock Prices Pi",1)
         btc.display.lcd_display_string("Brandon Stibich",2)
         led.blue()
+        x += 1
 led.destroy()
+print(f'Ran for {x} loops.')
     
 
 
