@@ -30,7 +30,8 @@ def display_stock(stock):
 #sleep(30)
 #init stocks
 
-gme = Stock('GME')
+#gme = Stock('GME')
+didi = Stock('DIDI')
 negg = Stock('NEGG')
 btc = Stock('BTC-USD')
 doge = Stock('DOGE-USD')
@@ -44,8 +45,9 @@ while True:
         led.blue()
 
         clear()
-        display_stock(gme)
+       # display_stock(gme)
         display_stock(negg)
+	display_stock(didi)
         display_stock(btc)
         display_stock(doge)
         display_stock(eth)
