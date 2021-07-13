@@ -47,7 +47,7 @@ while True:
         clear()
        # display_stock(gme)
         display_stock(negg)
-	display_stock(didi)
+        display_stock(didi)
         display_stock(btc)
         display_stock(doge)
         display_stock(eth)
