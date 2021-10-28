@@ -48,7 +48,7 @@ class Stock():
 			self.display.lcd_display_string(output_price, 2)
 
 
-		output_price = str(round(self.current_price,4))
+		output_price = str(round(self.current_price,6))
 		while len(output_price) < 16:
 			output_price = " " + output_price
 		self.display.lcd_display_string(self.ticker + ':' , 1)

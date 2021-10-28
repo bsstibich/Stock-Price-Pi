@@ -37,7 +37,6 @@ negg = Stock('NEGG')
 btc = Stock('BTC-USD')
 doge = Stock('DOGE-USD')
 eth = Stock('ETH-USD')
-shib = Stock('SHIB-USD')
 #init led
 led.setup()
 x = 0
@@ -47,11 +46,11 @@ while True:
         led.blue()
 
         clear()
-        display_stock(spy)
+        display_stock(appl)
         display_stock(negg)
+        display_stock(spy)
         display_stock(cook)
         display_stock(btc)
-        display_stock(shib)
         display_stock(doge)
         display_stock(eth)
 
